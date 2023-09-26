@@ -1,12 +1,12 @@
-{% set version = "0.31.0" %}
+{% set version = "0.114.0" %}
 
 package:
   name: qsv
   version: {{ version }}
 
 source:
-  url: https://github.com/jqnatividad/qsv/archive/refs/heads/conda.tar.gz
-  sha256: 62389fe7a78aa848e1dc9a1b9f96529c34c09ced72f34bd2b26dca64b132c865
+  url: https://github.com/jqnatividad/qsv/archive/refs/tags/0.114.0.tar.gz
+  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 build:
   number: 0
   missing_dso_whitelist:
@@ -19,7 +19,7 @@ build:
 
 requirements:
   build:
-    - python 
+
   host:
     - {{ compiler('rust') }}
     - rust
@@ -28,7 +28,7 @@ requirements:
     - cargo-bundle-licenses
     - rust-std-x86_64-apple-darwin     # [osx]
   run:
-    - python
+
     
 test:
   commands:
